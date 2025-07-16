@@ -95,6 +95,7 @@ CONFIG_SCHEMA = remote_base.validate_triggers(
                 CONF_BUFFER_SIZE,
                 esp32="10000b",
                 esp8266="1000b",
+                rp2040="1000b",
                 bk72xx="1000b",
                 ln882x="1000b",
                 rtl87xx="1000b",
@@ -181,6 +182,7 @@ FILTER_SOURCE_FILES = filter_source_files_from_platform(
             PlatformFramework.ESP32_IDF,
         },
         "remote_receiver_esp8266.cpp": {PlatformFramework.ESP8266_ARDUINO},
+        "remote_receiver_rp2040.cpp": {PlatformFramework.RP2040_ARDUINO},
         "remote_receiver_libretiny.cpp": {
             PlatformFramework.BK72XX_ARDUINO,
             PlatformFramework.RTL87XX_ARDUINO,
